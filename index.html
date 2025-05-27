@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Text Extractor</title>
+    <script src="https://cdn.jsdelivr.net/npm/tesseract.js@2.1.1/dist/tesseract.min.js"></script>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>📷 Image to Text</h1>
+            <p>Convert handwritten notes to digital text instantly</p>
+        </header>
+
+        <main class="main-content">
+            <div class="upload-section">
+                <div class="upload-card" id="uploadCard">
+                    <div class="upload-area" id="uploadArea">
+                        <input type="file" id="fileInput" accept="image/*" hidden>
+                        <div class="upload-content">
+                            <div class="upload-icon">📤</div>
+                            <h2>Upload Image</h2>
+                            <p>Drag & drop or click to select</p>
+                            <div class="file-types">Supports: JPG, PNG, WEBP</div>
+                        </div>
+                    </div>
+                    <div class="preview-section" id="previewSection"></div>
+                </div>
+            </div>
+
+            <div class="result-section" id="resultSection">
+                <div class="text-output" id="textOutput" contenteditable="true"></div>
+                <div class="action-buttons">
+                    <button class="btn copy-btn" id="copyBtn">📋 Copy Text</button>
+                    <button class="btn download-btn" id="downloadBtn">💾 Download</button>
+                </div>
+            </div>
+        </main>
+
+        <div class="processing-overlay" id="processingOverlay" style="display:none;">
+            <div class="processing-content">
+                <div class="spinner"></div>
+                <p class="status-text" id="statusText">Processing Image...</p>
+                <div class="progress-bar">
+                    <div class="progress" id="progressBar"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/app.js"></script>
+</body>
+</html>
