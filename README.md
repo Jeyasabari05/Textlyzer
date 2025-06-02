@@ -33,9 +33,6 @@
 
 <hr>
 
-<h2>📂 Live Preview</h2>
-<p><em>Coming soon...</em> (You can deploy with GitHub Pages and put the link here)</p>
-
 <hr>
 
 <h2>📬 Contact</h2>
